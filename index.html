@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>居力ウェブサイト</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/db86999413.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght,YOPQ@100..900,300&display=swap" rel="stylesheet">
+</head>
+<body>
+     <nav class="navbar">
+    <div class="navbar__container">
+      <a href="/" id="navbar__logo"><i class="fa-solid fa-hexagon-nodes" style="color: rgb(66, 171, 242);"></i> Mirai Nexus</a>
+      <div class="navbar__toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <div id="authMessage"></div>
+      <ul class="navbar__menu">
+        <li class="navbar__item">
+          <a href="index.html" class="navbar__links">ホーム</a>
+        </li>
+        <li class="navbar__item">
+          <a href="cprofile.html" class="navbar__links">会社概要</a>
+        </li>
+        <li class="navbar__item">
+          <a href="bservice.html" class="navbar__links">事業内容</a>
+        </li>
+        <li class="navbar__item">
+          <a href="announcement.html" class="navbar__links">お知らせ</a>
+        <li class="navbar__item">
+          <a href="careers.html" class="navbar__links">採用情報</a>
+        </li>
+        <li class="navbar__item">
+          <a href="contact.html" class="navbar__links">お問い合わせ</a>
+        </li>
+        </li>
+        <li class="navbar__btn">
+          <a  href="auth.html"
+              class="button"
+              id="authButton">
+              
+              サインイン
+            
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+  <!-- ようこそメッセージ -->
+ <div id="welcomePopup" class="popup">
+  <div class="popup__content">
+
+    <h2>
+      ログイン成功
+    </h2>
+
+    <p>
+      Mirai Nexus へようこそ
+    </p>
+
+    <button onclick="closePopup()">
+      続ける
+    </button>
+
+  </div>
+ </div>
+
+  <!-- ヒーローセクション -->
+  <div class="main">
+    <div class="main__container">
+      <div class="main__content">
+        <h1>Mirai Nexus</h1>
+        <h2>未来をつなぐ技術で社会に貢献する。</h2>
+        <p>Mirai Nexusは革新的なソリューションを提供し、企業の成長をサポートします。</p>
+        <button class="main__btn"><a href="announcement.html">詳しく見る</a></button>
+      </div>
+      <div class="main__image--container">
+        <img src="写真/pic1.svg" alt="pic" id="main__img">
+      </div>
+    </div>
+  </div>  
+
+
+  <!-- お知らせセクション -->
+    <div class="announcement">
+      <h1>知っておくべき情報</h1>
+      <div class="announcement__container">
+        <div class="announcement__card">
+          <h2>~~~~~~~</h2>
+          <p>~~~~~~~</p>
+          <button><a href="announcement.html">詳しく見る</a></button>
+        </div>
+        <div class="announcement__card">
+          <h2>~~~~~~~</h2>
+          <p>~~~~~~~</p>
+          <button><a href="announcement.html">詳しく見る</a></button>
+        </div>
+        <div class="announcement__card">
+          <h2>~~~~~~~</h2>
+          <p>~~~~~~~</p>
+          <button><a href="announcement.html">詳しく見る</a></button>
+        </div>
+      </div>
+    </div>
+
+<!-- フッターセクション -->
+  <div class="footer__container">
+      <section class="social__media">
+        <div class="social__media--wrap">
+          <div class="footer__logo">
+            <a href="/" id="footer__logo"><i class="fa-solid fa-hexagon-nodes"></i>Mirai Nexus</a>
+          </div>
+          <p class="website__rights">© Mirai Nexus 2026. All Rights Reserved.</p>
+          <div class="social__icons">
+            <a
+              class="social__icon--link"
+              href="/"
+              target="_blank"
+              aria-label="HTML"
+            >
+              <i class="fab fa-html5"></i>
+            </a>
+            <a
+              class="social__icon--link"
+              href="/"
+              target="_blank"
+              aria-label="CSS"
+            >
+              <i class="fab fa-css3-alt"></i>
+            </a>
+            <a
+              class="social__icon--link"
+              href="/"
+              target="_blank"
+              aria-label="JavaScript"
+            >
+              <i class="fab fa-js"></i>
+            </a>
+            <a
+              class="social__icon--link"
+              href="/"
+              target="_blank"
+              aria-label="PHP"
+            >
+              <i class="fab fa-php"></i>
+            </a>
+            <a
+              class="social__icon--link"
+              href="/"
+              target="_blank"
+              aria-label="GitHub"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+ <script src="app.js"></script>
+</body>
+</html>
