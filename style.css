@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   2. HEADER & NAVBAR LAYOUT 
+   ========================================================================== */
+
+.navbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}   
+
+.nav-container {
+    max-width: 1200px;  
+    margin: 0 auto;
+    padding: 0.9375rem 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    font-size: 0.875rem;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #e32d39;
+}
+
+/* ==========================================================================
+   3. HERO BANNER
+   ========================================================================== */
+.hero-banner {
+    background: linear-gradient(180deg, #e32d39 0%, #f5011a 100%);
+    color: #212529;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero-banner h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+/* ==========================================================================
+   4. TWO-COLUMN MAIN CONTENT (Your exact sketch layout)
+   ========================================================================== */
+.main-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: flex;
+    /* This triggers the side-by-side columns */
+    gap: 30px;
+    /* Sets the exact gap between the two cards */
+}
+
+/* Left side takes 4 parts of space (approx 35%) */
+.left-column {
+    flex: 4;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0 ,0, 0.05);
+}
+
+/* Right side takes 6 parts of space (approx 65%) */
+.right-column {
+    flex: 6;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0 ,0, 0.05);
+}
+
+.left-column {flex: 5;}
+.rightt-column {flex: 5;}
+
+.section-title {
+    font-size: 1.25rem;
+    margin-bottom: 1.5625rem;
+    border-left: 5px solid #f1be24;
+    padding-left: 12px;
+    color: #e32d39;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.title-en {
+    font-size: 13px;
+    color: #a0aea0;
+    font-weight: normal;
+}
+
+h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    border-left: 4px solid #f1be24;
+    padding-left: 10px;
+}
+
+.info-group {
+    margin-bottom: 15px;
+}
+
+.label {
+    font-size: 12px;
+    color: #7f8c8d;
+    font-weight: bold;
+    display: block;
+}
+
+/*=============================================
+   COMPANY OVERVIEW
+   ============================================*/
+
+.overview-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.info-card {
+    background-color: #f8fafc;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid #edf2f7;
+}
+
+.info-card h3 {
+    font-size: 15px;
+    color: #4a5568;
+    margin-bottom: 0.5rem;
+}
+
+.highlight-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1a202c;
+}
+
+.sub-text {
+    font-size: 12px;
+    color: #718096;
+    font-weight: normal;
+}
+
+/*========================================
+  NOTIFICATIONS
+  ======================================*/
+
+.news-list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+.news-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    border-bottom: 1px solid #e32d39;
+}
+
+.news-item:last-child {
+    border-bottom: none;
+}
+
+.news-date {
+    font-size: 13px;
+    color: #718096;
+    font-family: monospace;
+    min-width: 110px;
+    white-space: nowrap;
+}
+
+.news-badge {
+    font-size: 11px;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 4px;
+    color: #050505;
+    text-align: center;
+    min-width: 100px;
+    white-space: nowrap;
+}
+
+.badge-info { background-color: #4299e1;}
+.badge-news { background-color: #48bb78;}
+.badge-alert { background-color: #e53e3e;}
+
+.news-text {
+    font-size: 14px;
+    color: #2d3748;
+    text-decoration: none;
+    line-height: 1.5;
+}
