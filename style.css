@@ -193,168 +193,104 @@
 }
 
 /* Hero Section CSS*/
-.main {
-    background-color: #ffffff;
-    background-image: url('写真/bgdesign.jpg');
-    background-size: cover;
-    background-position: center;
+.hero{
+    position:relative;
+    height:100vh;
+    background:
+    linear-gradient(rgba(56, 56, 56, 0.55),rgba(132, 132, 132, 0.75)),
+    url("写真/bgdesign.jpg");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
 }
 
-.main__container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    justify-self: center;
-    margin: 0 auto;
-    min-height: calc(100vh - 80px);
-    background-color: #36808f68;
-    z-index: 1;
-    width: 100%;
-    max-width: 1300px;
-    padding: 0 50px;
-    border-radius: 6px;
+.hero__overlay{
+    width:100%;
+    max-width:1300px;
+    padding:0 80px;
 }
 
-.main__content h1 {
-    font-size: 5rem;
-    background-color: #005a87;
-    background-image: linear-gradient(to top, #1f83a5 0%, #1777a7 100%);
-    background-size: 100%;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-    text-align: center;
+.hero__content{
+    max-width:650px;
 }
 
-.main__content h2 {
-    font-size: 4rem;
-    background-color: #005a87;
-    background-image: linear-gradient(to top, #1f83a5 0%, #1777a7 100%);
-    background-size: 100%;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
+.hero__tag{
+    color:#355bf3;
+    letter-spacing:5px;
+    font-size:1.2rem;
+    margin-bottom:20px;
 }
 
-.main__content p {
-    margin-top: 1rem;
-    font-size:2rem;
-    font-weight: 700;
-    color: #000000;
+.hero h1{
+    font-size:5rem;
+    line-height:1.1;
+    color:white;
+    margin-bottom:30px;
+    font-weight:700;
 }
 
-.main__btn {
-    font-size: 1rem;
-    background-image: linear-gradient(to top, #1f83a5 0%, #1777a7 100%);
-    padding: 14px 32px;
-    border: none;
-    border-radius: 4px;
-    color: #1777a7;
-    margin-top: 2rem;
-    cursor: pointer;
-    position: relative;
-    transition: all 0.35s;
-    outline: none;
+.hero__text{
+    font-size:1.2rem;
+    color:#dddddd;
+    line-height:1.9;
+    margin-bottom:40px;
 }
 
-.main__btn a {
-    position: relative;
-    z-index: 2;
-    color: #cac3c3;
-    text-decoration: none;
+.hero__button{
+    display:inline-block;
+    padding:16px 36px;
+    background:#355bf3;
+    color:#fff;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:600;
+    transition:.35s;
 }
 
-.main__btn:after {
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: #21a2e3;
-    transition: all 0.35s;
-    border-radius: 4px;
+.hero__button:hover{
+    transform:translateY(-4px);
+    background:#355bf3;
+    box-shadow:
+    0 15px 35px #3f57b9;
 }
 
-.main__btn:hover{
-    color: #fff;
+.hero__wave{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:160px;
+    background: linear-gradient(to top, #208fe3 0%, rgba(219, 21, 21, 0) 100%);
 }
 
-.main__btn:hover:after {
-    width: 100%;
+@media(max-width:768px){
+
+.hero{
+    text-align:center;
 }
 
-.main__image--container {
-    text-align: center;
+.hero__overlay{
+    padding:0 25px;
 }
 
-#main__img {
-    height: 80%;   
-    width: 80%;
+.hero h1{
+    font-size:3rem;
 }
 
-/* Media Responsive */
-@media screen and (max-width: 768px) {
-    .main__container {
-        display: grid;
-        grid-template-columns: auto;
-        align-items: center;
-        justify-self: center;
-        width: 100%;
-        margin: 0 auto;
-        min-height: 90vh;
-        height: auto;
-    }
-
-    .main__content {
-        text-align: center;
-        margin-bottom: 4rem;
-    }
-
-    .main__content h1 {
-        font-size: 2.5rem;
-        margin-top: 2rem;
-    }
-
-    .main__content h2 {
-        font-size: 3rem;
-    }
-
-    .main__content p {
-        margin-top: 1rem;
-        font-size: 1.5rem;
-    }
+.hero__text{
+    font-size:1rem;
 }
 
-@media screen and (max-width: 480px) {
-    .main__content h1 {
-        font-size: 2rem;
-        margin-top: 3rem;
-    }
-
-    .main__content h2 {
-        font-size: 2rem;
-    }
-
-    .main__content p {
-        margin-top: 2rem;
-        font-size: 1.5rem;
-    }
-
-    .main__btn {
-        padding: 12px 36px;
-        margin: 2.5rem 0;
-    }
 }
 
 /* Announcements Section CSS */
 
 .announcement {
-    background-color: #ffffff;
+    background:
+    radial-gradient(circle at top left,#a3a3a3 0%,#b5b5b5 35%,#ffffff 100%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -365,8 +301,8 @@
 }
 
 .announcement h1 {
-    background-color: #1188dd;
-    background-image: linear-gradient(to right, #6dbff5 0%, #62bbf7 0%, #48a8e8 21%, #359ee4 52%, #1d99ec 78%, #018deb 100%);
+    background-color: #1a9efd;
+    background-image: linear-gradient(to right, #74c9fd 0%, #41b1fc 0%, #50b9ff 21%, #53baff 52%, #3eb1fd 78%, #1ba1fb 100%);
     background-size: 100%;
     margin-bottom: 5rem;
     font-size: 2.5rem;
@@ -493,7 +429,7 @@
 
 .footer__container {
   background-color: #141414;
-  padding: 2rem 0;
+  padding: 1.2rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -600,4 +536,570 @@
     padding: 10px;
     width: 100%;
   }
+}
+
+/* Company Profile Page Section CSS */
+
+.company{
+    min-height:100vh;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:120px 8%;
+    background:
+    radial-gradient(circle at top left,#a3a3a3 0%,#b5b5b5 35%,#ffffff 100%);
+    overflow:hidden;
+}
+
+.company__content{
+    width:50%;
+}
+
+.tag{
+    color:#000000;
+    letter-spacing:4px;
+    font-size:1.2rem;
+}
+
+.company h1{
+    font-size: clamp(3rem, 5vw, 3rem);
+    white-space: nowrap;
+    color:rgb(0, 138, 230);
+    margin:20px 0;
+    line-height:1.1;
+    font-weight:700;
+}
+
+.company p{
+    color:#2a2a2a;
+    font-size:1.1rem;
+    line-height:1.8;
+    max-width:600px;
+}
+
+.company__button{
+    display:inline-block;
+    margin-top:40px;
+    padding:15px 35px;
+    color:white;
+    text-decoration:none;
+    border-radius:50px;
+    background:#0071E3;
+    transition:.35s;
+}
+
+.company__button:hover{
+    transform:translateY(-4px);
+    box-shadow:0 20px 40px rgba(0,113,227,.4);
+}
+
+.company__card{
+    width:420px;
+    padding:40px;
+    border-radius:30px;
+    background:rgba(255,255,255,.06);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.12);
+    box-shadow:
+    0 30px 60px rgba(0,0,0,.45);
+    transition:.35s;
+}
+
+.company__card:hover{
+    transform:translateY(-10px);
+}
+
+.company__card h2{
+    color:#0170df;
+    font-size:2rem;
+    margin-bottom:30px;
+}
+
+.info{
+    display:flex;
+    justify-content:space-between;
+    padding:18px 0;
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.info span:first-child{
+    color:#0088ff;
+}
+
+.info span:last-child{
+    color:rgb(0, 0, 0);
+    font-weight:500;
+}
+
+@media(max-width:900px){
+
+.company{
+    flex-direction:column;
+    text-align:center;
+    gap:60px;
+}
+
+.company__content{
+    width:100%;
+}
+
+.company h1{
+    font-size:2.8rem;
+}
+
+.company__card{
+    width:100%;
+    max-width:420px;
+}
+}
+
+/* Business Service Page Section CSS */
+
+.services{
+    min-height:100vh;
+    background:
+    radial-gradient(circle at top left,#a3a3a3 0%,#b5b5b5 35%,#ffffff 100%);
+    color:#0791e7;
+    padding:120px 8%;
+}
+
+.services__header{
+    max-width:700px;
+    margin:0 auto 80px;
+    text-align:center;
+}
+
+.services__header span{
+    color:#000000;
+    letter-spacing:4px;
+    font-size:1.2rem;
+}
+
+.services__header h1{
+    font-size:2.9rem;
+    margin:20px 0;
+    line-height:1.1;
+}
+
+.services__header p{
+    color:#252525;
+    font-size:1.1rem;
+    line-height:1.8;
+}
+
+.services__grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:35px;
+}
+
+.service__card{
+    background:#656565;
+    border:1px solid #6b6a6a;
+    border-radius:28px;
+    padding:45px 35px;
+    transition:.35s;
+}
+
+.service__card:hover{
+    transform:translateY(-10px);
+    border-color:#555;
+    box-shadow:0 20px 50px rgba(255,255,255,.08);
+}
+
+.service__icon{
+    font-size:3rem;
+    margin-bottom:25px;
+}
+
+.service__card h2{
+    font-size:1.8rem;
+    margin-bottom:18px;
+}
+
+.service__card p{
+    color:#ffffff;
+    line-height:1.8;
+}
+
+@media(max-width:768px){
+
+.services{
+    padding:80px 20px;
+}
+
+.services__header h1{
+    font-size:2.6rem;
+}
+
+.service__card{
+    padding:35px 25px;
+}
+
+}
+
+/* Announcement Page Section CSS */
+
+.news{
+    background:
+    radial-gradient(circle at top left,#a3a3a3 0%,#b5b5b5 35%,#ffffff 100%);
+    color:#fff;
+    min-height:100vh;
+    padding:100px 8%;
+}
+
+.news__hero{
+    text-align:center;
+    max-width:700px;
+    margin:0 auto 80px;
+}
+
+.news__tag{
+    color:#000000;
+    letter-spacing:4px;
+    font-size:1.2rem;
+    text-transform:uppercase;
+}
+
+.news__hero h1{
+    font-size:3rem;
+    margin:20px 0;
+    color:rgb(0, 138, 230)
+}
+
+.news__subtitle{
+    color:#000000;  
+    font-size:1.15rem;
+    line-height:1.8;
+}
+
+.news__container{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(350px,1fr));
+    gap:35px;
+}
+
+.news__card{
+    background:#656565;
+    border:1px solid #6b6a6a;
+    border-radius:25px;
+    padding:40px;
+    transition:.35s;
+    display:flex;
+    flex-direction:column;
+}
+
+.news__card:hover{
+    transform:translateY(-10px);
+    border-color:#444;
+    box-shadow:
+    0 20px 50px rgba(255,255,255,.08);
+}
+
+.news__category{
+    display:inline-block;
+    width:max-content;
+    padding:6px 14px;
+    border-radius:30px;
+    background:#e6e6e6;
+    color:#009dff;
+    font-size:.85rem;
+    margin-bottom:20px;
+}
+
+.news__card h2{
+    font-size:2rem;
+    margin-bottom:15px;
+    line-height:1.3;
+}
+
+.news__date{
+    color:#888;
+    margin-bottom:20px;
+}
+
+.news__text{
+    color:#c7c7c7;
+    line-height:1.8;
+    flex:1;
+}
+
+.news__button{
+    margin-top:30px;
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+    transition:.3s;
+}
+
+.news__button:hover{
+    color:#009dff;
+}
+
+@media(max-width:768px){
+
+.news{
+    padding:80px 20px;
+}
+
+.news__hero h1{
+    font-size:2.8rem;
+}
+
+.news__container{
+    grid-template-columns:1fr;
+}
+
+.news__card{
+    padding:30px;
+}
+
+}
+
+/* Careers Page Section CSS */
+
+.careers{
+
+    background:
+    radial-gradient(circle at top left,#a3a3a3 0%,#b5b5b5 35%,#ffffff 100%);
+    color:#009dff;
+    min-height:100vh;
+    padding:120px 8%;
+}
+
+.careers__hero{
+    text-align:center;
+    max-width:750px;
+    margin:0 auto 80px;
+}
+
+.careers__tag{
+    color:#000000;
+    letter-spacing:5px;
+    font-size:.9rem;
+}
+
+.careers h1{
+    color:rgb(0, 138, 230);
+    font-size:3rem;
+    margin:22px 0;
+}
+
+.careers__subtitle{
+    color:#000000;
+    font-size:1.15rem;
+    line-height:1.8;
+}
+
+.careers__cards{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(320px,1fr));
+    gap:35px;
+}
+
+.career__card{
+    background:#656565;
+    border:1px solid #6b6a6a;
+    border-radius:25px;
+    padding:40px;
+    transition:.35s;
+}
+
+.career__card:hover{
+    transform:translateY(-10px);
+    border-color:#555;
+    box-shadow:
+    0 20px 40px rgba(255,255,255,.08);
+}
+
+.career__card h2{
+    font-size:2rem;
+    margin-bottom:20px;
+}
+
+.career__card p{
+    color:#ffffff;
+    line-height:1.8;
+    margin-bottom:25px;
+}
+
+.career__card ul{
+    list-style:none;
+    padding:0;
+    margin-bottom:30px;
+}
+
+.career__card li{
+    padding:10px 0;
+    color:#78b7dc;
+    border-bottom:1px solid #222;
+}
+
+.career__card a{
+    color:rgb(255, 255, 255);
+    text-decoration:none;   
+    font-weight:600;
+    transition:.3s;
+}
+
+.career__card a:hover{
+    color:#009dff;
+}
+
+@media(max-width:768px){
+
+.careers{
+    padding:80px 20px;
+}
+
+.careers h1{
+    font-size:2.8rem;
+}
+
+}
+
+/* Contact Page Section CSS */
+
+.contact{
+    background:
+    radial-gradient(circle at top left,#a3a3a3 0%,#b5b5b5 35%,#ffffff 100%);
+    min-height:100vh;
+    padding:120px 8%;
+}
+
+.contact__hero{
+    text-align:center;
+    max-width:750px;
+    margin:0 auto 80px;
+}
+
+.contact__tag{
+    color:#000;
+    letter-spacing:5px;
+    font-size:1rem;
+    text-transform:uppercase;
+}
+
+.contact__hero h1{
+    color:#008ae6;
+    font-size:3rem;
+    margin:20px 0;
+}
+
+.contact__subtitle{
+    color:#2d2d2d;
+    font-size:1.15rem;
+    line-height:1.8;
+}
+
+.contact__container{
+    display:grid;
+    grid-template-columns:380px 1fr;
+    gap:45px;
+}
+
+.contact__info{
+    background:#656565;
+    border-radius:25px;
+    padding:40px;
+    color:#fff;
+}
+
+.contact__info h2{
+    color:#fff;
+    margin-bottom:35px;
+}
+
+.contact__item{
+    margin-bottom:30px;
+}
+
+.contact__item h3{
+    color:#00a2ff;
+    margin-bottom:8px;
+    font-size:1.1rem;
+}
+
+.contact__item p{
+    color:#ddd;
+    line-height:1.7;
+}
+
+.contact__form{
+    background:#656565;
+    border-radius:25px;
+    padding:45px;
+}
+
+.contact__form h2{
+    color:#fff;
+    margin-bottom:30px;
+}
+
+.contact__group{
+    margin-bottom:22px;
+}
+
+.contact__group label{
+    display:block;
+    color:#fff;
+    margin-bottom:10px;
+    font-weight:600;
+}
+
+.contact__group input,
+.contact__group textarea{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    background:#f5f5f5;
+    font-size:1rem;
+    resize:vertical;
+}
+
+.contact__group input:focus,
+.contact__group textarea:focus{
+    outline:none;
+    box-shadow:0 0 0 3px rgba(0,157,255,.35);
+}
+
+.contact__button{
+    display:inline-block;
+    background:#0071E3;
+    color:#fff;
+    border:none;
+    padding:15px 35px;
+    border-radius:50px;
+    font-size:1rem;
+    cursor:pointer;
+    transition:.35s;
+}
+
+.contact__button:hover{
+    transform:translateY(-4px);
+    box-shadow:0 20px 40px rgba(0,113,227,.4);
+}
+
+@media(max-width:900px){
+
+.contact__container{
+    grid-template-columns:1fr;
+}
+
+.contact{
+    padding:80px 20px;
+}
+
+.contact__hero h1{
+    font-size:2.8rem;
+}
+
+.contact__info,
+.contact__form{
+    padding:30px;
+}
+
 }
