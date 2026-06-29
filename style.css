@@ -192,7 +192,7 @@
     }
 }
 
-/* Hero Section CSS*/
+/* Home Hero Section CSS*/
 .hero{
     position:relative;
     height:100vh;
@@ -541,13 +541,16 @@
 /* Company Profile Page Section CSS */
 
 .company{
-    min-height:100vh;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:120px 8%;
+    position:relative;
+    height:100vh;
     background:
-    radial-gradient(circle at top left,#a3a3a3 0%,#b5b5b5 35%,#ffffff 100%);
+    linear-gradient(rgba(163, 163, 163, 0.936),rgba(199, 199, 199, 0.84)),
+    url("写真/bgdesign3.jpg");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
     overflow:hidden;
 }
 
@@ -571,7 +574,7 @@
 }
 
 .company p{
-    color:#2a2a2a;
+    color:#000000;
     font-size:1.1rem;
     line-height:1.8;
     max-width:600px;
@@ -597,7 +600,7 @@
     width:420px;
     padding:40px;
     border-radius:30px;
-    background:rgba(255,255,255,.06);
+    background:rgba(212, 212, 212, 0.598);
     backdrop-filter:blur(18px);
     border:1px solid rgba(255,255,255,.12);
     box-shadow:
@@ -656,11 +659,19 @@
 /* Business Service Page Section CSS */
 
 .services{
+    position:relative;
     min-height:100vh;
     background:
-    radial-gradient(circle at top left,#a3a3a3 0%,#b5b5b5 35%,#ffffff 100%);
+    linear-gradient(rgba(163, 163, 163, 0.936),rgba(199, 199, 199, 0.84)),
+    url("写真/bgdesign4.jpg");
+    background-size:cover;
+    background-position:center;
+    display:column;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
     color:#0791e7;
-    padding:120px 8%;
+    padding:120px 16%;
 }
 
 .services__header{
@@ -741,11 +752,19 @@
 /* Announcement Page Section CSS */
 
 .news{
-    background:
-    radial-gradient(circle at top left,#a3a3a3 0%,#b5b5b5 35%,#ffffff 100%);
-    color:#fff;
+    position:relative;
     min-height:100vh;
-    padding:100px 8%;
+    background:
+    linear-gradient(rgba(163, 163, 163, 0.945),rgba(199, 199, 199, 0.918)),
+    url("写真/bgdesign5.jpg");
+    background-size:cover;
+    background-position:center;
+    display:column;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    color:#0791e7;
+    padding:120px 16%;
 }
 
 .news__hero{
@@ -860,12 +879,19 @@
 /* Careers Page Section CSS */
 
 .careers{
-
-    background:
-    radial-gradient(circle at top left,#a3a3a3 0%,#b5b5b5 35%,#ffffff 100%);
-    color:#009dff;
+    position:relative;
     min-height:100vh;
-    padding:120px 8%;
+    background:
+    linear-gradient(rgba(163, 163, 163, 0.936),rgba(199, 199, 199, 0.84)),
+    url("写真/bgdesign6.jpg");
+    background-size:cover;
+    background-position:center;
+    display:column;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    color:#0791e7;
+    padding:120px 16%;
 }
 
 .careers__hero{

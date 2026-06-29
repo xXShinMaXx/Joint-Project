@@ -14,8 +14,9 @@ body{
 
     height:45vh;
     background:
-    radial-gradient(circle at top left,#a3a3a3 0%,#b5b5b5 35%,#ffffff 100%);
-    color:white;
+    linear-gradient(rgba(163, 163, 163, 0.674),rgba(199, 199, 199, 0.642)),
+    url("写真/bgdesign7.jpg");
+    color:rgba(255, 255, 255, 0.591);
     display:flex;
     justify-content:center;
     align-items:center;
