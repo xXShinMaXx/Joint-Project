@@ -1,8 +1,14 @@
 <?php
+
 session_start();
 
 // 1. Connect to XAMPP MySQL Database 
-$conn = new mysqli("localhost", "root", "", "account", "3307");
+if ($_SERVER['HTTP_HOST'] ==  'localhost' || $_SERVER['SERVER_ADDR'] == '127.0.0.1') {
+    $conn = new mysqli("localhost", "root", "", "user", "3306");
+} else {
+    //FREE LIVE HOST DATABASE
+    $conn = new mysqli("sql108.infinityfree.com", "if0_42294725", "KGPh993Wf4", "if0_42294725_user");
+}
 
 // Check if connection fails
 if ($conn->connect_error) {
@@ -24,20 +30,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($conn->query($sql) === TRUE) {
             echo "<script>
                     alert('Registration successful! Your account is saved.');
-                    window.location.href = 'login.html';
+                    window.location.href = 'auth.html';
                   </script>";
             exit();
         } else {
             echo "<script>
                     alert('Registration failed. Please try again.');
-                    window.location.href = 'login.html';
+                    window.location.href = 'auth.html';
                   </script>";
-            exit();
         }
     }
 
     // CASE B: USER LOGIN
-    else {
+    else if (isset($_POST['action']) && $_POST['action'] === 'login') {
         $username = $_POST['username'];
         $password = $_POST['password'];
 
@@ -51,13 +56,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             echo "<script>
                     alert('Login successful! Welcome back, " . $username . ".(ログインに成功せいこうしました！)');
-                    window.location.href = 'index.html';
+                    window.location.href = 'index.php';
                   </script>";
             exit();
         } else {
             echo "<script>
                     alert('Login failed! Incorrect username or password. (ログインに失敗しました。ユーザー名またはパスワードが間違っています。)');
-                    window.location.href = 'login.html';
+                    window.location.href = 'auth.html';
                   </script>";
             exit();
         }

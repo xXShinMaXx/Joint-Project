@@ -6,7 +6,7 @@ $_SESSION = array();
 session_destroy();
 
 echo "<script> alert ('You have succesfully ログアウト.');
-    window.location.href = 'login.html';
+    window.location.href = 'auth.html';
     </script>";
 
 exit();
