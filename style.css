@@ -238,7 +238,8 @@ body{
 }
 
 .hero__tag{
-    color:#355bf3;
+    color:#0e66f4;
+    text-shadow: #fff 0px 0px 3px;
     letter-spacing:5px;
     font-size:1.2rem;
     margin-bottom:20px;
@@ -616,7 +617,7 @@ body{
     width:420px;
     padding:40px;
     border-radius:30px;
-    background:rgba(212, 212, 212, 0.598);
+    background:rgba(212, 211, 211, 0.854);
     backdrop-filter:blur(18px);
     border:1px solid rgba(255,255,255,.12);
     box-shadow:
@@ -721,7 +722,7 @@ body{
 }
 
 .service__card{
-    background:#656565;
+    background:#6a6a6a;
     border:1px solid #6b6a6a;
     border-radius:28px;
     padding:45px 35px;
