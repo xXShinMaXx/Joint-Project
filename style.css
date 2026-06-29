@@ -5,6 +5,12 @@
     font-family: 'Kumbh Sans', sans-serif;
 }
 
+html,
+body{
+    overflow-x:hidden;
+    width:100%;
+}
+
 .navbar {
     background: #131313;
     height: 80px;
@@ -121,15 +127,23 @@
         background: #131313;
     }
 
-    .navbar__menu.active {
-        background: #131313;
-        top: 100%;
-        opacity: 1;
-        transition: all 0.5s ease;
-        z-index: 99;
-        height: 50vh;
-        font-size: 1.6rem;
-    }
+.navbar__menu.active {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background: #131313;
+    opacity: 1;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 0.5s ease;
+    padding: 20px 0;
+}
 
     #navbar__logo {
         padding-left: 25px;
@@ -143,16 +157,21 @@
         background-color: #fff;
     }
 
-    .navbar__item {
-        width: 100%;
-    }
+.navbar__item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 
-    .navbar__links {
-        text-align: center;
-        padding: 2rem;
-        width: 100%;
-        display: table;
-    }
+.navbar__links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+}
 
     #mobile-menu {
         position: absolute;
@@ -169,8 +188,9 @@
         display: flex; 
         justify-content: center;
         align-items: center;
-        width: 60%;
-        height: 60px;
+        width:90%;
+        max-width:300px;
+        height:55px;
         margin: 0 auto;
     }
 
@@ -401,7 +421,7 @@
 /* Media Responsive */
 @media screen and (max-width: 960px) {
     .announcement {
-        height: 1600px;
+        height: auto;
     }
 
     .announcement h1 {
@@ -412,7 +432,7 @@
 
 @media screen and (max-width: 480px) {
     .announcement {
-        height: 1400px;
+        height: auto;
     }
 
     .announcement h1 {
@@ -427,13 +447,12 @@
 
 /* Footer CSS */
 
-.footer__container {
-  background-color: #141414;
-  padding: 1.2rem 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.footer__container{
+    background:#000;
+    padding:35px 20px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 }
 
 #footer__logo {
@@ -446,45 +465,42 @@
 }
 
 /* Social Icons */
-.social__icon--link {
-  color: #fff;
-  font-size: 24px;
+.social__icon--link{
+  color:#fff;
+  font-size:22px;
 }
 
 .social__media {
-  max-width: 1000px;
-  width: 100%;
+  width:100%;
 }
 
 .social__media--wrap {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 90%;
-  max-width: 1000px;
-  margin: 40px auto 0 auto;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:25px;
+  width:100%;
+  margin:20px auto 0;
 }
 
 .social__icons {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  width: 240px;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 18px;
 }
 
 .social__logo {
-  color: #fff;
-  justify-self: start;
-  margin-left: 20px;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 2rem;
-  display: flex;
-  align-items: center;
-  margin-bottom: 16px;
+  margin:0;
+  justify-content:center;
+  text-align:center;
+  font-size:1.6rem;
 }
 
-.social__logo .fa-disqus {
+.social__logo .fa-hexagon-nodes {
   margin-right: 0.5rem;
 }
 
@@ -503,26 +519,26 @@
   transition: all 0.3s ease-out;
 }
 
-.website__rights {
+.website__rights{
   color: #fff;
+  margin:0;
+  padding:0 15px;
+  text-align:center;
+  line-height:1.6;
 }
 
 /* Media Responsive */
-@media screen and (max-width: 820px) {
+@media screen and (max-width: 480px) {
   #footer__logo {
     margin-bottom: 3rem;
   }
 
   .footer__container {
-    padding: 3rem 0;
+    padding:35px 15px;
   }
 
   .website__rights {
     margin-bottom: 3rem;
-  }
-
-  .footer__link--wrapper {
-    flex-direction: column;
   }
 
   .social__media--wrap {
